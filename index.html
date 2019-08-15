@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="background">
+
+		<div class="nav">
+			<a class="a active" href="#">HOME</a>
+			<a class="b" href="#">SKILLS</a>
+			<a class="c" href="#">WORK</a>
+			<a class="d" href="#">CONTACT</a>
+		</div>
+
+		<div class="content">
+
+			<div class="dash">
+			<div class="high">
+				<img src="assets/solomon.png">
+				<p class="i">I'm John Benedict but you can call me John.</p><br><br>
+				<p class="ii">I'm a Web Developer mostly at the backend.</p> <br><br>
+				<p class="iii">An athlete, close-up magician and code enthusiast.</p>
+			</div>
+			<div class="home">
+				<h1>I am John Benedict Solomon</h1>
+				<h3>Junior Developer</h3>
+			</div>
+			</div>
+
+			<div class="skills">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+			<div class="work">
+				<a href="https://foodhubapi.herokuapp.com"><img src="assets/api.png"></a>
+			</div>
+
+			<div class="contact">
+				
+			</div>
+		</div>
+
+		
+	</div>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('a').click(function(){
+			var selected =$(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$d = $('.d'),
+		$dash = $('.dash'),
+		$skills = $('.skills'),
+		$work = $('.work'),
+		$contact = $('.contact');
+
+		$a.click(function(){
+			$dash.fadeIn();
+			$skills.fadeOut();
+			$work.fadeOut();
+			$contact.fadeOut();
+		});
+
+		$b.click(function(){
+			$skills.fadeIn();
+			$dash.fadeOut();
+			$work.fadeOut();
+			$contact.fadeOut();
+		});
+
+		$c.click(function(){
+			$work.fadeIn();
+			$dash.fadeOut();
+			$skills.fadeOut();
+			$contact.fadeOut();
+		});
+
+		$d.click(function(){
+			$contact.fadeIn();
+			$dash.fadeOut();
+			$work.fadeOut();
+			$skils.fadeOut();
+		});
+	});
+
+</script>
+</body>
+</html>
